@@ -5,6 +5,7 @@ import { useCachedPromise } from "@raycast/utils";
 
 const useStandings = () => {
   const fetchTeamStandings = useCallback(async () => {
+    console.debug("getting standings...");
     const data = await getStandings({ year: new Date().getUTCFullYear().toString(), group: "conference" });
 
     const afc: Array<Team> = data.children[0].standings.entries
@@ -24,6 +25,7 @@ const useStandings = () => {
         return a.rank - b.rank;
       });
 
+    console.debug(">>", afc);
     const nfc: Array<Team> = data.children[1].standings.entries
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .map((data: any) => {

@@ -17,7 +17,7 @@ const getStandings = async ({ year, group }: GetStandingsArgs) => {
     level: groupId,
   };
   const res = await axios.get(baseUrl, {
-    params,
+    // params,
   });
   return res.data;
 };
