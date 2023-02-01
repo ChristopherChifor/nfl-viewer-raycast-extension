@@ -12,10 +12,10 @@
   "license": "MIT",
   "commands": [
     {
-      "name": "nfl",
-      "title": "nfl",
-      "subtitle": "View the NFL schedule",
-      "description": "\"nfl\" will display the latest nfl schedule.",
+      "name": "standings",
+      "title": "View Standings",
+      "description": "Fetches NFL standings",
+      "subtitle": "NFL",
       "mode": "view"
     }
   ],
